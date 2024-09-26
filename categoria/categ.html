@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weiva: O seu caminho para uma saúde conectada!</title>
+    <link rel="stylesheet" href="../categoria/categ.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="../sobre/sobre.html">Sobre</a></li>
+                <li><a href="../contato/contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar...">
+            <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="carrinho">
+            <button> <a href="../chat/chat.html"><i class="fa-solid fa-comment-dots"></i></a></button>
+        </div>        
+    </header>
+    
+  <nav class="nav-category">
+      <div class="med">
+           <li><a href=""><i class="fa-solid fa-prescription-bottle-medical"></i></a></li>
+           <li><a href="">Medicamentos</a></li> 
+      </div>
+           <div class="links">
+           <li><a href=""><i class="fa-solid fa-pump-soap"></i></a></li>
+           <li><a href="">Higiene pessoal</a></li>
+       </div>
+    <div class="links">
+        <li><a href="#"><i class="fa-solid fa-spray-can-sparkles"></i></a></li>
+        <li><a href="">Cosméticos</a></li>
+    </div>
+    <div class="links">
+        <li><a  href="#"><i class="fa-solid fa-dumbbell"></i></a></li>
+        <li><a href="">Fitness</a></li>
+    </div>
+      
+     <div class="links">
+        <li><a href="#"><i class="fa-solid fa-person-breastfeeding"></i></i></a></li>
+        <li><a href="">Mães e bebês</a></li>
+     </div>
+
+</nav>  
+
+     <div class="pharm-user">
+    <div class="pharm-pict">
+   <img src="../imagens/domfarma.png" width="30">
+    </div>
+     <div class="pharm-desc">
+         <p>Dom Farma Drogaria</p>
+<span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+     </div>
+    </div>
+    
+    <main>
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/domfarma.png" width="22">
+          
+            <p>Dom Farma</p>
+                </div>
+                <img class="remedy"src="../imagens/paracetamol.jpg" alt="Produto 1">
+                <h4>Paracetamol (500mg)</h4>
+        <p>R$ 5.00</p>
+                <button onclick="addToCart('Paracetamol - 500mg', 5, 'imagens/paracetamol.jpg', 'Dom Farma Drogaria')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/domfarma.png" width="22">
+          
+            <p>Dom Farma</p>
+                </div>
+                <img class="remedy"src="../imagens/Ibuprofeno.webp" alt="Produto 1">
+                <h4>Ibuprofeno (400mg)</h4>
+        <p>R$ 10.00</p>
+                <button onclick="addToCart('Ibuprofeno - 400mg', 10, 'imagens/Ibuprofeno.webp', 'Dom Farma Drogaria')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/domfarma.png" width="22">
+          
+            <p>Dom Farma</p>
+                </div>
+                <img class="remedy"src="../imagens/losartana.png" alt="Produto 1">
+                <h4>Losartana Potássica (20mg)</h4>
+        <p>R$ 25.00</p>
+                <button onclick="addToCart('Losartana Potássica - 20mg', 25, 'imagens/losartana.png', 'Dom Farma Drogaria')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/domfarma.png" width="22">
+          
+            <p>Dom Farma</p>
+                </div>
+                <img class="remedy"src="../imagens/omeprazol.png" alt="Produto 1">
+                <h4>Omeprazol (20 mg)</h4>
+        <p>R$ 15.00</p>
+                <button onclick="addToCart('Omeprazol - 20mg', 15, 'imagens/omeprazol.png', 'Dom Farma Drogaria')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/domfarma.png" width="22">
+          
+            <p>Dom Farma</p>
+                </div>
+                <img class="remedy"src="../imagens/simeticona.webp" alt="Produto 1">
+                <h4>Simeticona (40mg)</h4>
+        <p>R$ 11.20</p>
+                <button onclick="addToCart('Simeticona - 40mg', 11.20, 'imagens/simeticona.webp', 'Dom Farma Drogaria')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+    
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/domfarma.png" width="22">
+          
+            <p>Dom Farma</p>
+                </div>
+                <img class="remedy"src="../imagens/atorvastatina.jpg" alt="Produto 1">
+                <h4>Atorvastatina (40mg)</h4>
+        <p>R$ 31.38</p>
+                <button onclick="addToCart('Atorvastatina - 40mg', 31.38, 'imagens/atorvastatina.jpg', 'Dom Farma Drogaria')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+</main>
+
+<div class="pharm-user">
+    <div class="pharm-pict">
+   <img src="../imagens/logopaguemenos.png" width="30">
+    </div>
+     <div class="pharm-desc">
+         <p>Pague Menos</p>
+<span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+     </div>
+    </div>
+    
+    <section class="main">
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logopaguemenos.png" width="22">
+          
+            <p>Pague Menos</p>
+                </div>
+                <img class="remedy"src="../imagens/buscopan.jpg" alt="Produto 1">
+                <h4>Buscopan (Butilbrometo de Escopolamina 10 mg)</h4>
+        <p>R$ 18.90</p>
+                <button onclick="addToCart('Buscopan 10 mg', 18.90, 'imagens/buscopan.jpg', 'Pague Menos')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logopaguemenos.png" width="22">
+          
+            <p>Pague Menos</p>
+                </div>
+                <img class="remedy"src="../imagens/sonridor.webp" alt="Produto 1">
+                <h4>Sonridor Caf</h4>
+        <p>R$ 8.00</p>
+                <button onclick="addToCart('Sonridor Caf', 8, 'imagens/sonridor.webp', 'Pague Menos')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logopaguemenos.png" width="22">
+          
+            <p>Pague Menos</p>
+                </div>
+                <img class="remedy"src="../imagens/cimegripe.webp" alt="Produto 1">
+                <h4>Cimegripe Dor e Febre 200m</h4>
+        <p>R$ 13.90</p>
+                <button onclick="addToCart('Cimegripe Dor e Febre 200mg', 13.90, 'imagens/cimegripe.webp', 'Pague Menos')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logopaguemenos.png" width="22">
+          
+            <p>Pague Menos</p>
+                </div>
+                <img class="remedy"src="../imagens/dipironaS.webp" alt="Produto 1">
+                <h4>Dipirona Sódica (500 mg)</h4>
+        <p>R$ 6.00</p>
+                <button onclick="addToCart('Dipirona Sódica - 500 mg', 6, 'imagens/dipironaS.webp', 'Pague Menos')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logopaguemenos.png" width="22">
+          
+            <p>Pague Menos</p>
+                </div>
+                <img class="remedy"src="../imagens/gaviscon.webp" alt="Produto 1">
+                <h4>Gaviscon </h4>
+        <p>R$ 25.20</p>
+                <button onclick="addToCart('Gaviscon', 25.20, 'imagens/gaviscon.webp', 'Pague Menos')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+    
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logopaguemenos.png" width="22">
+          
+            <p>Pague Menos</p>
+                </div>
+                <img class="remedy"src="../imagens/atorvastatina.jpg" alt="Produto 1">
+                <h4>Atorvastatina (40mg)</h4>
+        <p>R$ 31.38</p>
+                <button onclick="addToCart('Atorvastatina - 40mg', 31.38, 'imagens/atorvastatina.jpg', 'Pague Menos')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+
+</section>
+
+
+    <nav class="nav-bar">
+       <div class="link">
+           <li><a href="../index.html"><i class="fa-solid fa-house"></i></a></li>
+           <li><a href="../index.html">Ínicio</a></li>
+       </div>
+    <div class="link">
+        <li><a class="categ" href="#"><i class="fa-solid fa-table-cells"></i></a></li>
+        <li><a class="categ" href="">Categoria</a></li>
+    </div>
+    <div class="link">
+        <li><a  href="../sale/sale.html"><i class="fa-solid fa-tags"></i></a></li>
+        <li><a href="../sale/sale.html">Promoções</a></li>
+    </div>
+    <div class="link">
+        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a href="../cart.html">Carrinho</a></li>
+    </div>
+     <div class="link">
+        <li><a href=""><i class="fa-solid fa-circle-user"></i></a></li>
+        <li><a href="">Visitante</a></li>
+    </div>
+    </nav>
+    
+    <script src="../menu.js"></script>
+    <script src="../script.js">
+    </script>
+</body>
+</html>

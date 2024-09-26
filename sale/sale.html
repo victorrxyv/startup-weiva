@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weiva: O seu caminho para uma saúde conectada!</title>
+    <link rel="stylesheet" href="sale.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="../sobre/sobre.html">Sobre</a></li>
+                <li><a href="../contato/contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar...">
+            <button class="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="carrinho">
+            <button> <a href="../chat/chat.html"><i class="fa-solid fa-comment-dots"></i></a></button>
+        </div>        
+    </header>
+    
+    <div class="intro-produtos">
+        <span><i class="fa-solid fa-tags"></i></span> <h4>Confira os melhores preços!</h4>
+    </div>
+
+     <div class="pharm-user">
+    <div class="pharm-pict">
+   <img src="../imagens/tauaense.png" width="30">
+    </div>
+     <div class="pharm-desc">
+         <p>Farmácia Tauaense</p>
+<span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+     </div>
+    </div>
+    
+    <main>
+
+        <div class="product-card">
+            <div class="pharm-theme">
+                <img class="pharm-perfil" src="../imagens/tauaense.png" width="22">
+              
+                <p>Farmácia Tauaense</p>
+                    </div>
+                    <img class="remedy"src="../imagens/lenço.jpg" alt="Produto 1">
+                    <h4>Lenços Umedecidos - Huggies Supreme Care</h4>
+                    <div class="sale">
+                        <p class="alto"><s>R$ 12,90</s></p> <p class="baixo">R$ 11,20</p>
+                    </div>                <button onclick="addToCart('Lenços Umedecidos - Huggies Supreme Care', 11.20, 'imagens/lenço.jpg', 'Farmácia Tauaense')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+        </div>
+        
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/tauaense.png" width="22">
+          
+            <p>Farmácia Tauaense</p>
+                </div>
+                <img class="remedy"src="../imagens/omega3.jpg" alt="Produto 1">
+                <h4>Ômega 3 - Sundown</h4>
+                <div class="sale">
+                    <p class="alto"><s>R$ 59,90</s></p> <p class="baixo">R$ 49.90</p>
+                </div>
+                <button onclick="addToCart('Ômega 3 - Sundown', 49.90, 'imagens/omega3.jpg', 'Farmácia Tauaense')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/tauaense.png" width="22">
+          
+            <p>Farmácia Tauaense</p>
+                </div>
+                <img class="remedy"src="../imagens/Ibuprofeno.webp" alt="Produto 1">
+                <h4>Ibuprofeno (400mg)</h4>
+        <div class="sale">
+            <p class="alto"><s>R$ 10,00</s></p> <p class="baixo">R$ 8,69</p>
+        </div>
+                <button onclick="addToCart('Ibuprofeno - 400mg', 8.69, 'imagens/Ibuprofeno.webp', 'Farmácia Tauaense')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/tauaense.png" width="22">
+          
+            <p>Farmácia Tauaense</p>
+                </div>
+                <img class="remedy"src="../imagens/fralda.jpg" alt="Produto 1">
+                <h4>Fraldas Descartáveis - Pampers Confort Sec</h4>
+                <div class="sale">
+                    <p class="alto"><s>R$ 71.98</s></p> <p class="baixo">59,90</p>
+                </div>                <button onclick="addToCart('Fraldas Descartáveis - Pampers Confort Sec', 59.90, 'imagens/fralda.jpg', 'Farmácia Tauaense')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/tauaense.png" width="22">
+          
+            <p>Farmácia Tauaense</p>
+                </div>
+                <img class="remedy"src="../imagens/losartana.png" alt="Produto 1">
+                <h4>Losartana Potássica (20mg)</h4>
+                <div class="sale">
+                    <p class="alto"><s>R$ 10,00</s></p> <p class="baixo">R$ 8,47</p>
+                </div>                <button onclick="addToCart('Losartana Potássica - 20mg', 25, 'imagens/losartana.png', 'Farmácia Tauaense')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/tauaense.png" width="22">
+          
+            <p>Farmácia Tauaense</p>
+                </div>
+                <img class="remedy"src="../imagens/vitamina.jpg" alt="Produto 1">
+                <h4>Vitamina C (500 mg)</h4>
+                <div class="sale">
+                    <p class="alto"><s>R$ 22.60</s></p> <p class="baixo">R$ 20,34</p>
+                </div>                <button onclick="addToCart('Vitamina C - 500mg', 20.34, 'imagens/vitamina.jpg', 'Farmácia Tauaense')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+</main>
+
+<div class="pharm-user">
+    <div class="pharm-pict">
+   <img src="../imagens/logomoderna.png" width="30">
+    </div>
+     <div class="pharm-desc">
+         <p>Farmácia Moderna</p>
+<span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+     </div>
+    </div>
+    
+    <section class="main">
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logomoderna.png" width="22">
+          
+            <p>Farmácia Moderna</p>
+                </div>
+                <img class="remedy"src="../imagens/termo.jpg" alt="Produto 1">
+                <h4>Termômetro Digital - Incoterm</h4>
+<div class="sale">
+                    <p class="alto"><s>R$ 22.99</s></p> <p class="baixo">R$ 21,90</p>
+                </div>                <button onclick="addToCart('Termômetro Digital - Incoterm', 21.99, 'imagens/termo.jpg', 'Farmácia Moderna')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logomoderna.png" width="22">
+          
+            <p>Farmácia Moderna</p>
+                </div>
+                <img class="remedy"src="../imagens/teuto.jpg" alt="Produto 1">
+                <h4>Cólirio 20ml - teuto</h4>
+                <div class="sale">
+                    <p class="alto"><s>R$ 11.49</s></p> <p class="baixo">R$ 11.00</p>
+                </div>                 <button onclick="addToCart('Cólirio 20ml - teuto', 11, 'imagens/teuto.jpg', 'Farmácia Moderna')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logomoderna.png" width="22">
+          
+            <p>Farmácia Moderna</p>
+                </div>
+                <img class="remedy"src="../imagens/accu.jpg" alt="Produto 1">
+                <h4>Fita de Glicemia - Accu-Chek</h4>
+                <div class="sale">
+                    <p class="alto"><s>R$ 56,89</s></p> <p class="baixo">R$ 52,99</p>
+                </div>                 <button onclick="addToCart('Fita de Glicemia - Accu-Chek', 52.99, 'imagens/accu.jpg', 'Farmácia Moderna')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logomoderna.png" width="22">
+          
+            <p>Farmácia Moderna</p>
+                </div>
+                <img class="remedy"src="../imagens/bucal.jpg" alt="Produto 1">
+                <h4>Antisséptico Bucal - Listerine Cool Mint                </h4>
+                <div class="sale">
+                    <p class="alto"><s>R$ 26.60</s></p> <p class="baixo">R$ 24.79</p>
+                </div>                 <button onclick="addToCart('Antisséptico Bucal - Listerine Cool Mint', 24.79, 'imagens/bucal.jpg', 'Farmácia Moderna')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logomoderna.png" width="22">
+          
+            <p>Farmácia Moderna</p>
+                </div>
+                <img class="remedy"src="../imagens/gaviscon.webp" alt="Produto 1">
+                <h4>Gaviscon </h4>
+                <div class="sale">
+                    <p class="alto"><s>R$ 25.20</s></p> <p class="baixo">R$ 23,99</p>
+                </div>                 <button onclick="addToCart('Gaviscon', 23.99, 'imagens/gaviscon.webp', 'Farmácia Moderna')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+    
+    <div class="product-card">
+        <div class="pharm-theme">
+            <img class="pharm-perfil" src="../imagens/logomoderna.png" width="22">
+          
+            <p>Farmácia Moderna</p>
+                </div>
+                <img class="remedy"src="../imagens/gaza.webp" alt="Produto 1">
+                <h4>Compressa de Gaze Estéril - Cremer</h4>
+                <div class="sale">
+                    <p class="alto"><s>R$ 1,90</s></p> <p class="baixo">R$ 1,20</p>
+                </div>                 <button onclick="addToCart('Compressa de Gaze Estéril - Cremer', 1.20, 'imagens/gaza.webp', 'Farmácia Moderna')">Adicionar <i class="fa-solid fa-basket-shopping"></i></button>
+    </div>
+
+
+</section>
+
+
+    <nav class="nav-bar">
+       <div class="link">
+           <li><a href="../index.html"><i class="fa-solid fa-house"></i></a></li>
+           <li><a href="../index.html">Ínicio</a></li>
+       </div>
+    <div class="link">
+        <li><a href="../categoria/categ.html"><i class="fa-solid fa-table-cells"></i></a></li>
+        <li><a href="../categoria/categ.html">Categoria</a></li>
+    </div>
+    <div class="link">
+        <li><a class="categ" href="#"><i class="fa-solid fa-tags"></i></a></li>
+        <li><a class="categ" href="">Promoções</a></li>
+    </div>
+    <div class="link">
+        <li><a href="../cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a href="../cart.html">Carrinho</a></li>
+    </div>
+     <div class="link">
+        <li><a href=""><i class="fa-solid fa-circle-user"></i></a></li>
+        <li><a href="">Visitante</a></li>
+    </div>
+    </nav>
+    
+    <script src="../menu.js"></script>
+    <script src="../script.js">
+    </script>
+</body>
+</html>

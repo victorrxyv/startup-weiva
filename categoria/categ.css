@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c11515;
+    padding: 15px;
+    padding-bottom: 20px;
+    color: white;
+    width: 100%;
+    z-index: 100000;
+  }
+  
+  /* menu lateral */
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+   margin: 2px;
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(220, 20, 60, 0.7);
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    z-index: 1001;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .menu.open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .menu ul {
+    list-style: none;
+  }
+  
+  .menu ul li {
+    margin: 20px;
+  }
+  
+  .menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* barra de pesquisa */
+  
+  .search-container {
+    flex: 1;
+    display: flex;
+    margin: 0 20px;
+    border-radius: 10px;
+    background-color: #d15858;
+    max-width: 800px;
+    border: 1px solid white;
+  }
+  
+  .search-container button {
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    padding: 5px;
+  }
+  
+  .search-container input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  input::placeholder {
+    color: white;
+  
+  }
+  
+  .carrinho button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .carrinho a {
+    color: white;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+    transition: opacity 0.3s ease;
+  }
+  
+   /* nav bar */
+   .nav-bar {
+       bottom: 0;
+       width: 100%;
+       display: flex;
+       position: fixed;
+       padding: 6px;
+     align-items: center;
+       justify-content: space-around;
+       background-color: #f8f8f8;
+       z-index: 1;
+       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   }
+  
+   .link {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       list-style: none;
+   }
+  
+   .link a:not(.categ) {
+       text-decoration: none;
+       color: #5f5f5f;
+       font-weight: 500;
+   }
+  
+   .categ {
+       color: #f41111;
+       text-decoration: none;
+       font-weight: 600;
+   }
+  
+  /* nav bar da sessões */
+  
+  .nav-category {
+       display: flex;
+       padding: 1px;
+       position: sticky;
+    align-items: center;
+       min-height: 40px;    
+       justify-content: space-between;
+       background-color: #ffffff;
+       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+       overflow-x: auto;
+    white-space: nowrap;
+       z-index: 1;
+       top: 0;
+  }
+  
+   .links:not(.med) {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       list-style: none;
+       min-width: 140px;
+       padding: 10px;
+     white-space: nowrap;
+   }
+  
+   .links a {
+       text-decoration: none;
+       color: #5f5f5f;
+       font-weight: 500;
+       font-size: 18px;
+       transition: 0.3s;
+   }
+
+   .links a:hover {
+     font-size: 19px;
+   }
+  
+  .med {
+    display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       list-style: none;
+       min-width: 140px;
+       padding: 10px;
+       background-color: #ffffff;
+  }
+  
+  .med a {
+    text-decoration: none;
+    color: rgb(236, 2, 2);
+    font-size: 18px;
+    transition: 0.3s;
+  }
+
+  .med a:hover {
+    font-size: 19px;
+  }
+  
+  /* cards */
+  
+  .pharm-user {
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center; 
+    gap: 5px;
+
+  }
+  
+  .pharm-desc p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .pharm-desc span {
+    color: #ffcf00;
+    font-size: 13px;
+  }
+
+  .main {
+    margin-bottom: 50px;
+  }
+  
+  main, .main {
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }  
+  
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    min-width: 260px;
+    width: 260px;
+    height: 300px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    user-select: none;
+    
+  }
+  
+  .product-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .product-card button {
+    border: none;
+    background-color: #DC143C;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    width: 80%;
+    height: 15%;
+    font-weight: 500;
+    margin-bottom: 5px;
+    transition: 0.3s;
+  }
+  
+  .product-card button:hover {
+    background-color: #ff1544;
+    transform: scale(1.03);
+    font-weight: 600;
+    color: #e3e3e3;
+  }
+  
+  .product-card h4, .product-card p {
+    margin: 13px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  .product-card h4 {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 240px;
+  }
+  
+  .pharm-theme {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    border-bottom: 1px solid black;
+  }
+  
+  .remedy {
+    margin-top: 5px;
+    width: 85px;
+  }
+  
+  .pharm-theme p {
+    font-size: 14px;
+    color: #212121;
+  }
+  
+  
+  /* responsividade */
+  
+  @media (max-width: 768px) {
+
+    .nav-category {
+      justify-content: flex-start;
+    }
+
+      .intro-produtos, .pharms-container, .intro-produtos-2 {
+        font-size: 18px;
+      }
+  
+     .pharm-user {
+       padding: 0px 0px 0px 15px;
+     }
+  
+     .pharm-user img {
+       width: 30px;
+     }
+  
+     .pharm-desc p {
+       font-size: 14px;
+  }
+    .pharm-desc span {
+       font-size: 10px;
+  }
+  
+     .pharm-theme p {
+       font-size: 11px !important;
+     }
+     
+     .product-card h4, .product-card p {
+       margin: 5px 0;
+       font-weight: 600;
+       font-size: 17px;
+     }
+  
+  
+     .product-card h4 {
+       white-space: nowrap; 
+       overflow: hidden;
+       text-overflow: ellipsis; 
+       max-width: 160px;
+       padding: 5px;
+     }
+  
+     .product-card {
+       min-width: 160px;
+       width: 160px;
+       height: 230px;
+   }
+   }

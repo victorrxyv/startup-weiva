@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Carrinho</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h2><i class="fa-solid fa-cart-shopping"></i> Carrinho</h2>
+    </header>
+    <main>
+        <div class="cart-container">
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-summary">
+                <h2>Finalizar Pedido <i class="fa-solid fa-truck-arrow-right"></i></h2>
+                <p id="total-price">Total: R$ 0,00</p>
+                <button onclick="clearCart()" class="btn-clear-cart">COMPRAR</button>
+            </div>
+        </div>
+        <div class="suma">
+            kkkkk
+        </div>
+    </main>
+
+    <nav class="nav-bar">
+        <div class="link">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="index.html">Ínicio</a></li>
+        </div>
+     <div class="link">
+         <li><a href="categoria/categ.html"><i class="fa-solid fa-table-cells"></i></a></li>
+         <li><a href="categoria/categ.html">Categoria</a></li>
+     </div>
+     <div class="link">
+         <li><a  href="sale/sale.html"><i class="fa-solid fa-tags"></i></a></li>
+         <li><a href="sale/sale.html">Promoções</a></li>
+     </div>
+     <div class="link">
+         <li><a class="home" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+         <li><a class="home" href="cart.html">Carrinho</a></li>
+     </div>
+      <div class="link">
+         <li><a href=""><i class="fa-solid fa-circle-user"></i></a></li>
+         <li><a href="">Visitante</a></li>
+     </div>   
+     </nav>
+ 
+
+    <script src="script.js"></script>
+</body>
+</html>
