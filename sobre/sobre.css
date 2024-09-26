@@ -118,7 +118,6 @@ header {
 }
 
 .sobre h3 {
-    margin: 10px;
     font-size: 25px;
     line-height: 2em;
 
@@ -135,12 +134,17 @@ header {
     flex-direction: column;
 }
 
-.h5 {
+.h2-sobre {
   border-bottom: 1px solid red;
   margin-bottom: 10px;
   margin-top: 10px;
+  padding: 20px;
+  padding-bottom: 26px;
   text-align: center;
-  font-size: 20px;
+}
+
+.sobre article ul {
+  list-style-position: inside;
 }
 
 .footer {
