@@ -15,7 +15,6 @@ function addToCart(productName, productPrice, productImage, storeName) {
     Swal.fire({
         position: "center",
         toast: true,
-        width: 250,
         icon: "success",
         title: "adicionado ao carrinho!",
         showConfirmButton: false,
