@@ -12,8 +12,13 @@ function addToCart(productName, productPrice, productImage, storeName) {
     localStorage.setItem('cart', JSON.stringify(cart));
 
     // alerta de confirmação
-    alert(`${productName} foi adicionado ao carrinho!`);
-}
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "adicionado ao carrinho!",
+        showConfirmButton: false,
+        timer: 800
+      });}
 
 // função para carregar os itens do carrinho na página cart.html
 function loadCart() {
