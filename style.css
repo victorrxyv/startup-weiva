@@ -318,6 +318,27 @@
     font-weight: 600;
     color: #e3e3e3;
   }
+
+  .sale {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sale p {
+    font-size: 20px !important;
+}
+
+.alto {
+    color: #212121;
+    font-weight: 100 !important;
+}
+
+.baixo {
+    color: #c11515;
+    font-weight: 600;
+}
+
   
   .product-card h4, .product-card p {
     margin: 13px;
@@ -403,10 +424,8 @@
        padding: 15px;
    }
   
-  /* responsividade */
   
    @media (max-width: 768px) {
-  
      
     .feitosa, .paguemenos, .domfarm, .moderna {
         height: 150px;
@@ -436,6 +455,10 @@
      .pharm-theme p {
        font-size: 11px !important;
      }
+
+     .sale p {
+      font-size: 17px !important;
+  }
      
      .product-card h4, .product-card p {
        margin: 5px 0;
