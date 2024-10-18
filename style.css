@@ -1,460 +1,483 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #e6e6e6;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #c11515;
-    padding: 15px;
-    padding-bottom: 20px;
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100000;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* menu lateral */
-  
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .hamburger .line {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-   margin: 2px;
-  }
-  
-  .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: rgba(220, 20, 60, 0.7);
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-    z-index: 1001;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    transform: translateX(-100%);
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .menu.open {
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .menu ul {
-    list-style: none;
-  }
-  
-  .menu ul li {
-    margin: 20px;
-  }
-  
-  .menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  /* barra de pesquisa */
-  
-  .search-container {
-    flex: 1;
-    display: flex;
-    margin: 0 20px;
-    border-radius: 15px;
-    background-color: white;
-    max-width: 700px;
-    padding: 5px;
-  }
-  
-  .search-container button {
-    background-color: transparent;
-    color: #000;
-    border-radius: 0px 10px 10px 0px;
-    border: none;
-    padding: 5px;
-  }
-  
-  .search-container input {
-    width: 100%;
-    padding: 5px;
-    border: none;
-    background-color: transparent;
-  }
-  
-  input::placeholder {
-    color: rgb(0, 0, 0);
-  
-  }
-  
-  .carrinho button {
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
-  }
-  
-  .carrinho a {
-    color: white;
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 5;
-    display: none;
-    transition: opacity 0.3s ease;
-  }
-  
-  
-  /* fim do header */
-  
-  /* recomendações de farmácias */
-  
-  .invisivel {
-    margin-top: 45px;
-    background-color: #c11515;
-    color: transparent;
-  }
-  
-  .pharms-container {
-    height: auto;
-    background: linear-gradient( #c11515, #e6e6e6);
-    color: white;
-    font-size: 25px;
-    padding-left: 15px;
-  }
-  
-  .introducao {
-    text-align: center;
-    margin-bottom: 10px;
-    padding-top: 10px;
-  }
-  
-  .introducao hr {
-    margin-right: 15px;
-    margin-top: 10px;
-   }
-  
-   .pharms {
-       display: flex;
-       align-items: center;
-       margin-top: 10px;
-       gap: 10px;
-       overflow-x: auto;
-       white-space: nowrap;
-       width: 100%;
-       padding: 10px;
-   }
-  
-  .domfarm {
-       width: 580px;
-       height: 250px;
-       align-items: flex-end;
-       background-size: cover;
-       background-position: center;
-       border-radius: 10px;
-       padding: 10px;
-       justify-content: flex-start;
-       display: flex;
-       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url(imagens/domfarm.jpg);
-    flex-shrink: 0;
-  }
-  
-   .feitosa {
-       width: 580px;
-       height: 250px;
-       align-items: flex-end;
-       background-size: cover;
-       background-position: center;
-       border-radius: 10px;
-       padding: 10px;
-       justify-content: flex-start;
-       display: flex;
-       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url(imagens/feitosa.jpeg);
-     flex-shrink: 0;
-   }
-  
-   .moderna {
-       width: 580px;
-       height: 250px;
-       align-items: flex-end;
-       background-size: cover;
-       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url(imagens/moderna.jpg); 
-       background-position: center;
-       border-radius: 10px;
-       padding: 10px;
-       justify-content: flex-start;
-       display: flex;
-       flex-shrink: 0;
-   }
-  
-   .paguemenos {
-       width: 580px;
-       height: 250px;
-       align-items: flex-end;
-       background-size: cover;
-       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url(imagens/paguemenos.jpeg); 
-       background-position: center;
-       border-radius: 10px;
-       padding: 10px;
-       justify-content: flex-start;
-       display: flex;
-       flex-shrink: 0;
-   }
-  
-   .desc {
-       flex-direction: column;
-   }
-  
-   .desc a {
-       color: white;
-       font-weight: 800;
-       text-decoration: none;
-   }
-  
-   .desc p {
-       color: #ffcf00;
-   }
-  
-  
-   /* Inicio da introdução dos produtos */
-  
-   .intro-produtos {
-       display: flex;
-       font-size: 25px;
-       gap: 5px;
-       padding: 15px;
-   }
-  
-   .intro-produtos span, .intro-produtos-2 span {
-       color: #c11515;
-   }
-  
-  .pharm-user {
-    display: flex;
-    padding: 15px;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  .pharm-desc p {
-    font-size: 25px;
-    font-weight: 500;
-  }
-  .pharm-desc span {
-    color: #ffcf00;
-    font-size: 19px;
-  }
-  
-  main, .cuidado-diario {
-    padding: 15px;
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    white-space: nowrap;
-  }  
-  
-  .product-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    min-width: 260px;
-    width: 260px;
-    height: 300px;
-    border-radius: 10px;
-    transition: 0.3s;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    user-select: none;
-    
-  }
-  
-  .product-card:hover {
-    transform: scale(1.03);
-  }
-  
-  .product-card button {
-    border: none;
-    background-color: #DC143C;
-    border-radius: 5px;
-    padding: 5px;
-    color: white;
-    width: 80%;
-    height: 15%;
-    font-weight: 500;
-    margin-bottom: 5px;
-    transition: 0.3s;
-  }
-  
-  .product-card button:hover {
-    background-color: #ff1544;
-    transform: scale(1.03);
-    font-weight: 600;
-    color: #e3e3e3;
-  }
-  
-  .product-card h4, .product-card p {
-    margin: 13px;
-    font-weight: 700;
-    font-size: 20px;
-  }
-  
-  .product-card h4 {
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
-    max-width: 240px;
-  }
-  
-  .pharm-theme {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    padding: 5px;
-    border-bottom: 1px solid black;
-  }
-  
-  .remedy {
-    margin-top: 5px;
-    width: 85px;
-  }
-  
-  .pharm-theme p {
-    font-size: 14px;
-    color: #212121;
-  }
-  
-.suma {
-  margin-bottom: 50px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6e6e6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c11515;
+  padding: 15px;
+  padding-bottom: 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100000;
+}
+
+/* menu lateral */
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+ margin: 2px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(220, 20, 60, 0.7);
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  z-index: 1001;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu.open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  margin: 20px;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* barra de pesquisa */
+
+.search-container {
+  flex: 1;
+  display: flex;
+  margin: 0 20px;
+  border-radius: 15px;
+  background-color: white;
+  max-width: 700px;
+  padding: 5px;
+}
+
+.search-container button {
+  background-color: transparent;
+  color: #000;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  padding: 5px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0);
+
+}
+
+.carrinho button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.carrinho a {
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+
+/* fim do header */
+
+/* recomendações de farmácias */
+
+.invisivel {
+  margin-top: 45px;
+  background-color: #c11515;
   color: transparent;
 }
 
-  /*fim dos cards*/
+.pharms-container {
+  height: auto;
+  background: linear-gradient( #c11515, #e6e6e6);
+  color: white;
+  font-size: 25px;
+  padding-left: 15px;
+}
+
+.introducao {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.introducao hr {
+  margin-right: 15px;
+  margin-top: 10px;
+ }
+
+ .pharms {
+     display: flex;
+     align-items: center;
+     margin-top: 10px;
+     gap: 10px;
+     overflow-x: auto;
+     white-space: nowrap;
+     width: 100%;
+     padding: 10px;
+ }
+
+.domfarm {
+     width: 580px;
+     height: 250px;
+     align-items: flex-end;
+     background-size: cover;
+     background-position: center;
+     border-radius: 10px;
+     padding: 10px;
+     justify-content: flex-start;
+     display: flex;
+     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url(imagens/domfarm.jpg);
+  flex-shrink: 0;
+}
+
+ .feitosa {
+     width: 580px;
+     height: 250px;
+     align-items: flex-end;
+     background-size: cover;
+     background-position: center;
+     border-radius: 10px;
+     padding: 10px;
+     justify-content: flex-start;
+     display: flex;
+     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url(imagens/feitosa.jpeg);
+   flex-shrink: 0;
+ }
+
+ .moderna {
+     width: 580px;
+     height: 250px;
+     align-items: flex-end;
+     background-size: cover;
+     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url(imagens/moderna.jpg); 
+     background-position: center;
+     border-radius: 10px;
+     padding: 10px;
+     justify-content: flex-start;
+     display: flex;
+     flex-shrink: 0;
+ }
+
+ .paguemenos {
+     width: 580px;
+     height: 250px;
+     align-items: flex-end;
+     background-size: cover;
+     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url(imagens/paguemenos.jpeg); 
+     background-position: center;
+     border-radius: 10px;
+     padding: 10px;
+     justify-content: flex-start;
+     display: flex;
+     flex-shrink: 0;
+ }
+
+ .desc {
+     flex-direction: column;
+ }
+
+ .desc a {
+     color: white;
+     font-weight: 800;
+     text-decoration: none;
+ }
+
+ .desc p {
+     color: #ffcf00;
+ }
+
+
+ /* Inicio da introdução dos produtos */
+
+ .intro-produtos {
+     display: flex;
+     font-size: 25px;
+     gap: 5px;
+     padding: 15px;
+ }
+
+ .intro-produtos span, .intro-produtos-2 span {
+     color: #c11515;
+ }
+
+.pharm-user {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  gap: 5px;
+}
+
+.pharm-desc p {
+  font-size: 25px;
+  font-weight: 500;
+}
+.pharm-desc span {
+  color: #ffcf00;
+  font-size: 19px;
+}
+
+main, .cuidado-diario {
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  white-space: nowrap;
+}  
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  min-width: 260px;
+  width: 260px;
+  height: 300px;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  user-select: none;
   
-   /* nav bar */
-   .nav-bar {
-       bottom: 0;
-       width: 100%;
-       display: flex;
-       position: fixed;
-       padding: 10px;
-       align-items: center;
-       justify-content: space-around;
-       background-color: #f8f8f8;
-       z-index: 10001;
-       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  
-   }
-  
-   .link {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       justify-content: center;
-       text-align: center;
-       list-style: none;
-   }
-  
-   .link a:not(.home) {
-       text-decoration: none;
-       color: #5f5f5f;
-       font-weight: 500;
-   }
-  
-   .home {
-       color: #f41111;
-       text-decoration: none;
-       font-weight: 600;
-   }
-  
-   .intro-produtos-2 {
-       display: flex;
-       font-size: 25px;
-       gap: 5px;
-       padding: 15px;
-   }
-  
-  /* responsividade */
-  
-   @media (max-width: 768px) {
-  
-     
-    .feitosa, .paguemenos, .domfarm, .moderna {
-        height: 150px;
-        width: 270px;
-        flex-shrink: 0;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card button {
+  border: none;
+  background-color: #DC143C;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  width: 80%;
+  height: 15%;
+  font-weight: 500;
+  margin-bottom: 5px;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #ff1544;
+  transform: scale(1.03);
+  font-weight: 600;
+  color: #e3e3e3;
+}
+
+.sale {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sale p {
+  font-size: 20px !important;
+}
+
+.alto {
+  color: #212121;
+  font-weight: 100 !important;
+}
+
+.baixo {
+  color: #c11515;
+  font-weight: 600;
+}
+
+
+.product-card h4, .product-card p {
+  margin: 13px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.product-card h4 {
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  max-width: 240px;
+}
+
+.pharm-theme {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.remedy {
+  margin-top: 5px;
+  width: 85px;
+}
+
+.pharm-theme p {
+  font-size: 14px;
+  color: #212121;
+}
+
+.suma {
+margin-bottom: 50px;
+color: transparent;
+}
+
+/*fim dos cards*/
+
+ /* nav bar */
+ .nav-bar {
+     bottom: 0;
+     width: 100%;
+     display: flex;
+     position: fixed;
+     padding: 10px;
+     align-items: center;
+     justify-content: space-around;
+     background-color: #f8f8f8;
+     z-index: 10001;
+     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+ }
+
+ .link {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     list-style: none;
+ }
+
+ .link a:not(.home) {
+     text-decoration: none;
+     color: #5f5f5f;
+     font-weight: 500;
+ }
+
+ .home {
+     color: #f41111;
+     text-decoration: none;
+     font-weight: 600;
+ }
+
+ .intro-produtos-2 {
+     display: flex;
+     font-size: 25px;
+     gap: 5px;
+     padding: 15px;
+ }
+
+
+ @media (max-width: 768px) {
+   
+  .feitosa, .paguemenos, .domfarm, .moderna {
+      height: 150px;
+      width: 270px;
+      flex-shrink: 0;
+  }
+
+    .intro-produtos, .pharms-container, .intro-produtos-2 {
+      font-size: 18px;
     }
-  
-      .intro-produtos, .pharms-container, .intro-produtos-2 {
-        font-size: 18px;
-      }
-  
-     .pharm-user {
-       padding: 0px 0px 0px 15px;
-     }
-  
-     .pharm-user img {
-       width: 30px;
-     }
-  
-     .pharm-desc p {
-       font-size: 14px;
-  }
-    .pharm-desc span {
-       font-size: 10px;
-  }
-  
-     .pharm-theme p {
-       font-size: 11px !important;
-     }
-     
-     .product-card h4, .product-card p {
-       margin: 5px 0;
-       font-weight: 600;
-       font-size: 17px;
-     }
-  
-  
-     .product-card h4 {
-       white-space: nowrap; 
-       overflow: hidden;
-       text-overflow: ellipsis; 
-       max-width: 160px;
-       padding: 5px;
-     }
-  
-     .product-card {
-       min-width: 160px;
-       width: 160px;
-       height: 230px;
+
+   .pharm-user {
+     padding: 0px 0px 0px 15px;
    }
+
+   .pharm-user img {
+     width: 30px;
    }
+
+   .pharm-desc p {
+     font-size: 14px;
+}
+  .pharm-desc span {
+     font-size: 10px;
+}
+
+   .pharm-theme p {
+     font-size: 11px !important;
+   }
+
+   .sale p {
+    font-size: 17px !important;
+}
+   
+   .product-card h4, .product-card p {
+     margin: 5px 0;
+     font-weight: 600;
+     font-size: 17px;
+   }
+
+
+   .product-card h4 {
+     white-space: nowrap; 
+     overflow: hidden;
+     text-overflow: ellipsis; 
+     max-width: 160px;
+     padding: 5px;
+   }
+
+   .product-card {
+     min-width: 160px;
+     width: 160px;
+     height: 230px;
+ }
+ }
