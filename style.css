@@ -272,7 +272,11 @@ input::placeholder {
   font-size: 19px;
 }
 
-main, .cuidado-diario {
+.melhores-promo a {
+  color: #c11515;
+}
+
+main, .cuidado-diario, .melhores-promo {
   padding: 15px;
   display: flex;
   gap: 15px;
