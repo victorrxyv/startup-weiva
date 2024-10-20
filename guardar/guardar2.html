@@ -12,28 +12,42 @@
 
   <style>
     body {
-      background: rgb(121, 0, 0);
-      background: linear-gradient(90deg, rgba(121, 0, 0, 1) 0%, rgba(174, 2, 2, 1) 35%, rgba(226, 3, 3, 1) 100%);
-      display: flex;
+      background: rgb(121,0,0);
+background: linear-gradient(90deg, rgba(121,0,0,1) 0%, rgba(174,2,2,1) 35%, rgba(226,3,3,1) 100%);      display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      display: flex;
       gap: 10px;
     }
+
+    .rotate {
+      display: inline-block;
+      transform: rotate(135deg);
+    }
+
+    .archivo-uniquifier {
+      font-family: "Archivo", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    a {
+     text-decoration: underline red;
+   }
 
     .img-mapa img {
       width: 130px;
       margin-top: 40px;
     }
 
+
     h3 {
       color: white;
     }
-
-    a {
-      text-decoration: underline red;
-    }
   </style>
+
 </head>
 
 <body>
@@ -46,12 +60,17 @@
     <form class="bg-light w-100 p-4 rounded-4" id="loginForm">
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control form-control-lg" id="email" required>
+        <input type="email" class="form-control form-control-lg" id="email" aria-describedby="emailHelp" required>
       </div>
 
       <div class="mb-3">
         <label for="password" class="form-label">Senha</label>
         <input type="password" class="form-control form-control-lg" id="password" required>
+      </div>
+
+      <div class="mb-3">
+        <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">Me lembrar</label>
       </div>
 
       <div class="mb-3">
@@ -61,34 +80,35 @@
       <div class="row">
         <div class="col-12 d-flex justify-content-between align-items-center">
           <span>Não tem conta?</span>
-          <a href="cadastro.html"><span class="text-danger">Criar conta</span></a>
+          <a href="cadastro.html"><span class="text-danger">Criar conta</span>
+          </a>        
         </div>
       </div>
     </form>
   </div>
 
   <script>
-    window.onload = function () {
+    window.onload = function() {
       const isLoggedIn = localStorage.getItem('isLoggedIn');
       if (isLoggedIn === 'true') {
         window.location.href = 'home.html';
       }
     };
 
-    document.getElementById('loginForm').addEventListener('submit', function (event) {
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
-      // Coletar dados do formulário
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      // Armazenar os dados no localStorage
-      localStorage.setItem('userEmail', email);
-      localStorage.setItem('userPassword', password); // Opcional se você quiser armazenar a senha
-      localStorage.setItem('isLoggedIn', 'true');
+      if (email === '' || password === '') {
+        alert('Por favor, preencha todos os campos.');
+      } else {
+        localStorage.setItem('isLoggedIn', 'true');
 
-      // Redirecionar para a página principal
-      window.location.href = 'home.html';
+        window.location.href = 'index.html';
+      }
+      
     });
   </script>
 
