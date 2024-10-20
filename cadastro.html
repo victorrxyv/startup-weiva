@@ -78,16 +78,13 @@
     document.getElementById('loginForm').addEventListener('submit', function (event) {
       event.preventDefault();
 
-      // Coletar dados do formulário
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      // Armazenar os dados no localStorage
       localStorage.setItem('userEmail', email);
       localStorage.setItem('userPassword', password); // Opcional se você quiser armazenar a senha
       localStorage.setItem('isLoggedIn', 'true');
 
-      // Redirecionar para a página principal
       window.location.href = 'home.html';
     });
   </script>

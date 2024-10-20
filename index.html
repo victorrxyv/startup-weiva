@@ -92,32 +92,24 @@
   </div>
 
   <script>
-    // Checar se o usuário está logado ao carregar a página
     window.onload = function() {
       const isLoggedIn = localStorage.getItem('isLoggedIn');
       if (isLoggedIn === 'true') {
-        window.location.href = 'home.html'; // Redireciona para home.html se já estiver logado
+        window.location.href = 'home.html'; 
       }
     };
 
-    // Lógica de cadastro e redirecionamento
     document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const cidade = document.getElementById('cidade').value;
-
-      // Armazenar no localStorage
       localStorage.setItem('userName', name);
       localStorage.setItem('userEmail', email);
       localStorage.setItem('userCity', cidade);
-      localStorage.setItem('userPassword', document.getElementById('password').value); // Salvar a senha também
-
-      // Marcar usuário como logado
+      localStorage.setItem('userPassword', document.getElementById('password').value); 
       localStorage.setItem('isLoggedIn', 'true');
-
-      // Redirecionar para home.html após o cadastro
       window.location.href = 'home.html';
     });
   </script>
