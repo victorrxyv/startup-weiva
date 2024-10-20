@@ -55,6 +55,9 @@ header {
   visibility: hidden;
 }
 
+/*       if (email === '' || password === '' || text === ''  ) {
+*/
+
 .menu.open {
   transform: translateX(0);
   opacity: 1;
