@@ -17,6 +17,7 @@ background: linear-gradient(90deg, rgba(121,0,0,1) 0%, rgba(174,2,2,1) 35%, rgba
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      display: flex;
       gap: 10px;
     }
 
@@ -33,7 +34,7 @@ background: linear-gradient(90deg, rgba(121,0,0,1) 0%, rgba(174,2,2,1) 35%, rgba
     }
 
     .img-mapa img {
-      width: 180px;
+      width: 150px;
       margin-top: 10px;
     }
 
@@ -100,13 +101,7 @@ background: linear-gradient(90deg, rgba(121,0,0,1) 0%, rgba(174,2,2,1) 35%, rgba
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
 
-      if (email === '' || password === '') {
-        alert('Por favor, preencha todos os campos.');
-      } else {
-        localStorage.setItem('isLoggedIn', 'true');
-
-        window.location.href = 'index.html';
-      }
+      
     });
   </script>
 
