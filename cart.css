@@ -5,6 +5,28 @@
     font-family: Arial, sans-serif;
 }
 
+/* pagina dos dados pra facilitar (mesma estilização)*/
+
+.user-name {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 5px;
+}
+
+.user-phot {
+    font-size: 30px;
+}
+
+#logoutButton {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+
 body {
     background-color: #f4f4f4;
 }
@@ -18,16 +40,8 @@ header {
     color: white;
 }
 
-.user-name {
- display: flex;
- align-items: center;
- justify-content: center;
- gap: 5px;
-}
 
-.user-phot {
-    font-size: 30px;
-}
+
 
 .back-to-products {
     color: #c11515;
