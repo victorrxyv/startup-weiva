@@ -18,6 +18,13 @@ header {
     color: white;
 }
 
+.user-name {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+}
+
 .back-to-products {
     color: #c11515;
     text-decoration: none;
